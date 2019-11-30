@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homePageFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.HomePageFragment">
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="220sp"
+            app:auto_cycle="true"
+            app:corner_radius="0"
+            app:delay="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:period="3000" />
+
+        <TextView
+            android:id="@+id/events"
+            android:layout_width="114dp"
+            android:layout_height="45dp"
+            android:background="#FFFFFF"
+            android:fontFamily="@font/roboto_light"
+            android:text="Events"
+            android:textColor="#1F1E1E"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_slider" />
+
+        <Button
+            android:id="@+id/more_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00F5F2F2"
+            android:fontFamily="@font/roboto_light"
+            android:text="More..."
+            android:textColor="#03A9F4"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_slider" />
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/event_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/more_news" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
